@@ -49,7 +49,7 @@ typedef struct {
 } BRChainParams;
 
 static const char *BRMainNetDNSSeeds[] = {
-        "hackintosh.x.thebarn.com", "c20.x.thebarn.com", NULL
+        "207.180.231.183:65000", "161.35.101.221:65000", NULL
 };
 
 static const char *BRTestNetDNSSeeds[] = {
@@ -59,8 +59,8 @@ static const char *BRTestNetDNSSeeds[] = {
 // blockchain checkpoints - these are also used as starting points for partial chain downloads, so they must be at
 // difficulty transition boundaries in order to verify the block difficulty at the immediately following transition
 static const BRCheckPoint BRMainNetCheckpoints[] = {
-    {       0, uint256("00000a055a8a21ab15d2c24bf5769100e7e3d3e4134fb8a6a7e879f13a91c974"), 1460931698, 0x1e0fffff },
-    {       2, uint256("00000a30710ef17b5db6ef891423341c526283a9021572420c578f69b50cb6ff"), 1461012027, 0x1e0fffff },
+    {       0, uint256("37540c3c757bb77e42c168d8197447b6aba38c2d1ec0ddf59d2e774c41953093"), 1570073000, 0x1f00ffff },
+    {       2, uint256("0000617d6b796e58c90a0037fca7e78c15857169aa0277c5153fd3c1a18dafe9"), 1597529633, 0x1f00ffff },
 //    {      0, uint256("000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"), 1231006505, 0x1d00ffff },
 //    {  20160, uint256("000000000f1aef56190aee63d33a373e6487132d522ff4cd98ccfc96566d461e"), 1248481816, 0x1d00ffff },
 //    {  40320, uint256("0000000045861e169b5a961b7034f8de9e98022e7a39100dde3ae3ea240d7245"), 1266191579, 0x1c654657 },
@@ -134,8 +134,8 @@ static int BRTestNetVerifyDifficulty(const BRMerkleBlock *block, const BRSet *bl
 
 static const BRChainParams BRMainNetParams = {
     BRMainNetDNSSeeds,
-    6763,                  // standardPort
-    0xdbb6c0fb,            // magicNumber
+    65000,                  // standardPort
+    0xeeaeeacc,            // magicNumber
     SERVICES_NODE_WITNESS, // services
     BRMainNetVerifyDifficulty,
     BRMainNetCheckpoints,
